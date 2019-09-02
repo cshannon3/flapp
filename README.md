@@ -8,7 +8,7 @@ A new Flutter package.
 
  This is still a work in progress. Once I believe that the core code is stable I'll publish this, but currently usage requires cloning this repo
 
-#Purpose 
+# Purpose 
 
 The goal of this project is to:<br />
     1. Minimize the time required to go from idea to working app<br />
@@ -17,20 +17,20 @@ The goal of this project is to:<br />
     4. Help new developers to get started and understand how Flutter works<br />
     5. Provide a platform that allows for people to share and use each others custom widgets(**Long Term Goal**)<br />
 
-This project aims to:
+This project aims to:<br/>
     1. Automate code required to retrieve, add, update and delete data from common sources(local SQLite, Firebase, Popular APIs, Google Services like maps etc)<br />
     2. Provide a simple to understand project structure<br />
     3. Allow interchangability and rapid changes of structural components of app <br />
     4. Minimize issues with 'breaking changes' in flutter codebase or supported plugin and package code by updating templating library and providing instructions on how to update your project code<br />
 
 <br />
-This project does not aim to:
+This project does not aim to:<br/>
     1. Creating production ready apps.<br />
     2. Optomizing app performance<br />
     3. Maximizing features and options<br />
 
 
-#Usage
+# Usage
 
 1. Clone this project <br />
 2. Create new flutter project<br />
@@ -83,8 +83,8 @@ Denotations:
 ```
 
 # Overview
-The generated code is in a modified Model-View-Controller(MVC) layout. 
-It is split into 4 main parts:
+The generated code is in a modified Model-View-Controller(MVC) layout. <br/>
+It is split into 4 main parts:<br/>
 
 1. The Data Controller - This part is in charge of connecting the source of the data(local db, cloud etc) to data models that are used by the app<br />
 2. Data Models - These contain all of the information about the data<br />
