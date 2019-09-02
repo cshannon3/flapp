@@ -1,0 +1,38 @@
+{
+    "AppName": "gre_vocab",
+    "models": {
+        "word": {
+            "sourceTypes": ["localdb", "jsonData"],
+            "assetName":"word",
+            "params": {
+                "word":{"type":"String"},
+                "synonyms":{"type":"List<String>"},
+                "definition": {"type": "String"},
+                "type":{"type": "String"},
+                "example":{"type": "String"},
+                "know":{"type": "bool"},
+                "correctAttempts":{"type": "int"},
+                "incorrectAttempts":{"type": "int"}
+            },
+            "screens":{
+                "screen":{},
+                "list_screen": {}
+            },
+            "components":{
+                "tile":{
+                    "title":"activity",
+                    "subtitle": "duration",
+                    "color":"red"
+                },
+                "form":{}
+            
+            }
+        }
+    
+
+
+    },
+    "UI": {
+    }
+
+}
