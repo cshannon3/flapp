@@ -40,28 +40,25 @@ This project does not aim to:<br/>
 6. Build json using template below<br />
 7. update pubspec.yaml with new packages<br />
 
-#Json Template
+**Json Template**
 
 Template structure below
-look in examples>gre_vocab>jsons>app.json for real example
-Denotations:
--@____@ = what you are required to fill in..
+look in examples>gre_vocab>jsons>app.json for real example<br/>
+Denotations:<br/>
+**@____@**= what you are required to fill in..
     ex "@appname@" => "example_app"<br />
--%(____)% = list of options to chose from 
+**%(____)%** = list of options to chose from 
     ex.[%('blue', 'red', 'pink', 'black')%] = > ['blue', 'red']<br />
--[, ...] = option to add more
+**[, ...]** = option to add more
     ex params:{ "param1":{"type":"String"}[, ...]}<br />
--!EX=> "word"! = Example of exactly what to do
-    ex "@modelName@" !EX=> "word"! <br />
--^^__^^ = note on specific usage requirements
-    ex "@modelName@" !EX=> "word"! ^^model name should be lower case and use underscores if multiple words long^^<br />
+
+
 
 ```
 {
     "AppName": ,
     "models": {
-        "@modelName@" !EX=> "word"! ^^model name should be lower case and use underscores if multiple words long^^
-        : {
+        "@modelName@" :{
             "sourceTypes": [%("localdb", "jsonData")%],
             "assetName":"@modelName@",
             "params": {
