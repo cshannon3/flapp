@@ -1,0 +1,106 @@
+{
+    "AppName": "bookie",
+    "models": {
+        "book": {
+            "sourceTypes": ["jsonData"],
+            "assetName":"book",
+            "params": {
+                "isbn": {"type": "String"},
+                "title":{"type":"String"},
+                "author":{"type":"String"},
+                "year": {"type": "int"},
+                "ownershipStatus":{"type": "String"},
+                "readingStatus":{"type": "String"},
+                "imgUrl":{"type": "String"},
+                "chapters":{"type": "List<String>"},
+                "readingEvents":{"type": "List<int>"},
+                "ideaNodes":{"type": "List<int>"},
+                "recommendedBy":{"type": "String"}
+            },
+            "screens":{
+                "screen":{},
+                "list_screen": {}
+            },
+            "components":{
+                "tile":{
+                    "title":"activity",
+                    "subtitle": "duration",
+                    "color":"red"
+                },
+                "form":{}
+            
+            }
+        },
+        "ideaNode": {
+            "sourceTypes": ["localdb"],
+            "params": {
+                "text":{"type":"String"},
+                "bookId": {"type": "int"},
+                "bookTitle": {"type": "String"},
+                "page":{"type":"int"},
+                "chapter":{"type":"String"},
+                "type":{"type":"String"},
+                "category":{"type":"String"},
+                "associatons":{"type":"List<int>"}
+            },
+            "screens":{
+                "screen":{},
+                "list_screen": {}
+            },
+            "components":{
+                "tile":{
+                    "title":"activity",
+                    "subtitle": "duration",
+                    "color":"red"
+                }
+            }
+            
+        },
+        "association": {
+            "sourceTypes": ["localdb"],
+            "params": {
+                "bookFromId":{"type":"int"},
+                "chapterFrom": {"type": "String"},
+                "ideaNodeFromId":{"type":"int"},
+                "bookToId":{"type":"int"},
+                "chapterTo": {"type": "String"},
+                "ideaNodeToId":{"type":"int"},
+                "strength":{"type":"double"}
+            },
+            "screens":{
+               
+            },
+            "components":{
+                
+            }
+            
+        },
+        "readingEvent": {
+            "sourceTypes": ["localdb"],
+            "params": {
+                "bookId": {"type": "int"},
+                "pageStart":{"type":"int"},
+                "pageEnd":{"type":"int"},
+                "timeStart":{"type":"String"},
+                "timeEnd":{"type":"String"}
+            },
+            "screens":{
+                "screen":{},
+                "list_screen": {}
+            },
+            "components":{
+                "tile":{
+                    "title":"activity",
+                    "subtitle": "duration",
+                    "color":"red"
+                }
+            }
+            
+        }
+
+
+    },
+    "UI": {
+    }
+
+}

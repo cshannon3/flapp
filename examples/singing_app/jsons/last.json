@@ -1,0 +1,166 @@
+{
+    "AppName": "singing_app",
+    "Models": {
+        "userRecording": {
+            "className": "UserRecordingModel",
+            "sourceTypes": ["localDB"],
+            "params": {
+                "notes": {"type": "String"},
+                "songKey":{"type":"String"},
+                "song": {"type":"int"},
+                "score": {"type":"double"},
+                "pitchAccuracy": {"type":"int"},
+                "intervalAccuracy": {"type":"int"},
+                "timingAccuracy" : {"type":"int"},
+                "wordAccuracy" : {"type":"int"}
+        }
+    },
+        "song": {
+            "className": "SongModel",
+            "sourceTypes": ["localDB"],
+            "params": {
+                "name": {"type": "String" },
+                "artist": {"type": "String"},
+                "songKey":{"type":"int"},
+                "attempts": {"type": "int", "value":"0"},
+                "avgScore":{"type": "double", "value":"0.0"},
+                "lastTenScore":{"type": "double", "value":"0.0"}
+            }
+        },
+        "note": {
+            "className": "NoteModel",
+            "sourceTypes": ["localDB"],
+            "params": {
+                "k": {"type": "bool"},
+                "songKey":{"type":"int"},
+                "attempts": {"type": "int"},
+                "avgScore":{"type": "double"},
+                "lastTenScore":{"type": "double"}
+            }
+        }
+
+
+    },
+    "UI": {
+        "home": {
+            "classFolder":"screens",
+            "className": "HomeScreen",
+            "isStateful": true,
+            "params": {
+                "changeScreen": {
+                    "type": "Function(SCREEN)",
+                    "valueIn":"changeScreen"
+                }
+            },
+            "widgetTree": {
+                "WidgetName": "Container",
+                "params": {
+                    "width": "double.infinity",
+                    "height": "double.infinity",
+                    "color": "Colors.red",
+                    "child": {
+                        "WidgetName": "Container",
+                        "params": {
+                            "width": 100.0,
+                            "height": 50.0
+                        }
+                    }
+                }
+
+            }
+        },
+        "songs": {
+            "classFolder":"screens",
+            "className": "SongsScreen",
+            "isStateful": false,
+            "params": {
+                "changeScreen": {
+                    "type": "Function(SCREEN)",
+                    "valueIn":"changeScreen"
+                },
+                "songModels": {
+                    "type":"List<SongModel>",
+                    "valueIn":"allSongModels"
+                },
+                "selectSongModel": {
+                    "type":"Function(SongModel, bool)",
+                    "valueIn":"changeCurrentSongModel"
+                }
+            },
+            "widgetTree": {
+                "WidgetName": "Container",
+                "params": {
+                    "width": "double.infinity",
+                    "height": "double.infinity",
+                    "color": "Colors.red",
+                    "child": {
+                        "WidgetName": "ListView",
+                        "params":{
+                            "children":"List.generate(songModels.length, (i){return SongTile(songModel:songModels[i], selectSongModel:selectSongModel,  changeScreen: changeScreen);})"
+                        }
+                    }
+                    
+                }
+
+            }
+        },
+        "song":{
+            "classFolder":"screens",
+            "className": "SongScreen",
+            "isStateful": false,
+            "params": {
+                "changeScreen": {
+                    "type": "Function(SCREEN)",
+                    "valueIn":"changeScreen"
+                },
+                "songModel": {
+                    "type":"SongModel"
+                },
+                "selectSongModel": {
+                    "type":"Function(SongModel, bool)",
+                    "valueIn":"changeCurrentSongModel"
+                }
+            },
+            "widgetTree": {
+                "WidgetName": "Container",
+                "params": {
+                    "width": "double.infinity",
+                    "height": "double.infinity",
+                    "color": "Colors.red"
+                }
+
+            }
+
+        },
+        "song_tile":{
+            "classFolder":"components",
+            "className": "SongTile",
+            "isStateful": false,
+            "params": {
+                "changeScreen": {
+                    "type": "Function(SCREEN)",
+                    "valueIn":"changeScreen"
+                },
+                "songModel": {
+                    "type":"SongModel"
+                },
+                "selectSongModel": {
+                    "type":"Function(SongModel, bool)",
+                    "valueIn":"changeCurrentSongModel"
+                }
+            },
+            "widgetTree": {
+                "WidgetName": "ListTile",
+                    "params": {
+                        "onTap": "(){selectSongModel(songModel, false); changeScreen(SCREEN.SONG);}",
+                        "title":"Text(songModel.name)"
+                    }
+        
+
+            }
+
+        }
+
+    }
+
+}

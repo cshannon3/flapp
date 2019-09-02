@@ -1,0 +1,65 @@
+{
+    "AppName": "travel_app",
+    "models": {
+        "destination": {
+            "sourceTypes": ["localdb"],
+            "params": {
+                "backdropAssetPath": {"type": "String"},
+                "flagAssetPath":{"type":"String"},
+                "name":{"type":"String"},
+                "country":{"type":"String"},
+                "lat":{"type":"double"},
+                "long":{"type":"double"},
+                "order":{"type":"int"},
+                "stayLength": {"type": "int"}
+            },
+            "screens":{
+                "screen":true,
+                "list_screen": true
+            },
+            "components":{
+                "tile":{
+                    "title":"activity",
+                    "subtitle": "duration",
+                    "color":"red"
+                },
+                "form": true,
+                "chart":false
+            }
+            
+        },
+        "place": {
+            "sourceTypes": ["localdb"],
+            "params": {
+                "name": {"type": "String"},
+                "destination": {"type": "String"},
+                "rating":{"type":"double"},
+                "price":{"type":"double"},
+                "address":{"type":"String"},
+                "url":{"type":"String"},
+                "reservation":{"type":"bool"},
+                "imagePath":{"type":"String"}
+            
+            },
+            "screens":{
+                "screen":true,
+                "list_screen": true
+            },
+            "components":{
+                "tile":{
+                    "title":"activity",
+                    "subtitle": "duration",
+                    "color":"red"
+                },
+                "form": false,
+                "chart":true
+            }
+            
+        }
+
+
+    },
+    "UI": {
+    }
+
+}

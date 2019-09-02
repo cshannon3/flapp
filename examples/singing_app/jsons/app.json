@@ -1,0 +1,20 @@
+{
+    "AppName": "singing_app",
+    "Models": {
+      
+        "note": {
+            "className": "NoteModel",
+            "sourceTypes": ["localDB"],
+            "params": {
+                "duration": {"type": "String"},
+                "note":{"type":"String"},
+                "deviation": {"type": "double"}
+            }
+        }
+
+
+    },
+    "UI": {
+    }
+
+}
