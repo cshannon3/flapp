@@ -4,13 +4,11 @@ A new Flutter package.
 
 
 
-Flapp is an app building tool for Flutter.
-* Note
-!! This is still a work in progress
-!! Once I believe that the core code is stable I'll add
-!! publish this, but currently usage requires cloning this repo
+**Flapp is an app building tool for Flutter.**
 
-##Purpose 
+ This is still a work in progress. Once I believe that the core code is stable I'll publish this, but currently usage requires cloning this repo
+
+#Purpose 
 
 The goal of this project is to:
     1. Minimize the time required to go from idea to working app
@@ -32,7 +30,7 @@ This project does not aim to:
     3. Maximizing features and options
 
 
-##Usage
+#Usage
 
 1. Clone this project 
 2. Create new flutter project
@@ -42,20 +40,20 @@ This project does not aim to:
 6. Build json using template below
 7. update pubspec.yaml with new packages
 
-##Json Template
+#Json Template
 
 Template structure below
 look in examples>gre_vocab>jsons>app.json for real example
 Denotations:
-@____@ = what you are required to fill in
+*@____@ = what you are required to fill in
     ex "@appname@" => "example_app"
-%(____)% = list of options to chose from 
+*%(____)% = list of options to chose from 
     ex.[%('blue', 'red', 'pink', 'black')%] = > ['blue', 'red']
-[, ...] = option to add more
+*[, ...] = option to add more
     ex params:{ "param1":{"type":"String"}[, ...]}
-!EX=> "word"! = Example of exactly what to do
+*!EX=> "word"! = Example of exactly what to do
     ex "@modelName@" !EX=> "word"! 
-^^__^^ = note on specific usage requirements
+*^^__^^ = note on specific usage requirements
     ex "@modelName@" !EX=> "word"! ^^model name should be lower case and use underscores if multiple words long^^
 
 ```
@@ -84,7 +82,7 @@ Denotations:
 }
 ```
 
-## Overview
+# Overview
 The generated code is in a modified Model-View-Controller(MVC) layout. 
 It is split into 4 main parts:
 
@@ -94,7 +92,7 @@ It is split into 4 main parts:
 4. State Controller - The 'brain' of the app that controls what screen is shown and what data goes where.
 
 
-## Current Features
+# Current Features
     - Local Database
 
 
