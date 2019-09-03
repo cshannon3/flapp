@@ -8,11 +8,11 @@
 <br/> 
 
 <br />
- Inspired by these awesome projects:<br />
-[slidy](https://github.com/Flutterando/slidy)<br/>
-[json_model](https://github.com/flutterchina/json_model)<br/>
-[json_to_dart](https://github.com/javiercbk/json_to_dart)<br/>
-[functional_widget](https://github.com/rrousselGit/functional_widget)<br/>
+Inspired by these awesome projects:
+- Bloc Generator [slidy](https://github.com/Flutterando/slidy)
+- Json Model Generator [json_model](https://github.com/flutterchina/json_model)<br/>
+- [json_to_dart](https://github.com/javiercbk/json_to_dart)<br/>
+- [functional_widget](https://github.com/rrousselGit/functional_widget)<br/>
 <br />
 Additional Resources
 <br/>
