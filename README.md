@@ -9,10 +9,10 @@
 
 <br />
  Inspired by these awesome projects:<br />
-    [slidy](https://github.com/Flutterando/slidy)<br/>
-    [json_model](https://github.com/flutterchina/json_model)<br/>
-    [json_to_dart](https://github.com/javiercbk/json_to_dart)<br/>
-    [functional_widget](https://github.com/rrousselGit/functional_widget)<br/>
+[slidy](https://github.com/Flutterando/slidy)<br/>
+[json_model](https://github.com/flutterchina/json_model)<br/>
+[json_to_dart](https://github.com/javiercbk/json_to_dart)<br/>
+[functional_widget](https://github.com/rrousselGit/functional_widget)<br/>
 <br />
 Additional Resources
 <br/>
@@ -27,7 +27,7 @@ Additional Resources
         [2dimensions](https://www.2dimensions.com/)<br/>
         [embed-new-flutter](https://dartpad.dev/experimental/embed-new-flutter.html?id=fbd01e9700bd19af3c71dafa0fbb454b&split=50)<br/>
         <br/><br/>
-    **Getting Started**:<br/>
+    ** Getting Started **:<br/>
         [i-want-to-learn-flutter-how-to-start](https://medium.com/flutter-community/i-want-to-learn-flutter-how-to-start-ffb4145f9b26) by [Pooja Bhaumik](https://twitter.com/pblead26)<br/>
         [FlutterBasicWidgets](https://github.com/PoojaB26/FlutterBasicWidgets) by [Pooja Bhaumik](https://twitter.com/pblead26)<br/>
         [flutter_starter_kit](https://github.com/KingWu/flutter_starter_kit) by [King Wu](https://in-techlab.com/)<br/>
