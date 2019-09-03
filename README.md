@@ -1,43 +1,43 @@
 # flapp
 
 
-**Flapp is an app building tool for Flutter.**
+Flapp is an app building tool for Flutter.
 
  This is still a work in progress. Once I believe that the core code is stable I'll publish this, but currently usage requires cloning this repo
 
 <br/> 
 
 <br />
-Inspired by these awesome projects:
-- Bloc Generator [slidy](https://github.com/Flutterando/slidy)
-- Json Model Generator [json_model](https://github.com/flutterchina/json_model)<br/>
-- [json_to_dart](https://github.com/javiercbk/json_to_dart)<br/>
-- [functional_widget](https://github.com/rrousselGit/functional_widget)<br/>
+    Inspired by these awesome projects:<br /> 
+[slidy](https://github.com/Flutterando/slidy)<br />
+[json_model](https://github.com/flutterchina/json_model)<br />
+[json_to_dart](https://github.com/javiercbk/json_to_dart)<br/>
+[functional_widget](https://github.com/rrousselGit/functional_widget)<br/>
 <br />
 Additional Resources
 <br/>
-    Sites:
-        [flutterx](https://flutterx.com/) and [itsallwidgets](https://itsallwidgets.com/) by [hillel Coren](https://twitter.com/hillelcorenbr), [Scott Stoll](https://twitter.com/scottstoll2017),  [Simon Lightfoot](https://twitter.com/devangelslondon), and  [Thomas Burkhart](https://twitter.com/ThomasBurkhartB)<br/>
-        [flutter-widget-livebook](https://flutter-widget-livebook.blankapp.org/basics/introduction/)<br/>
-        [fidev](https://fidev.io/)<br/>
-        [Coding With Flutter](https://codingwithflutter.com/)<br/>
-        [Flutter Crash Course](http://fluttercrashcourse.com/)<br/>
-        [Code Magic](https://codemagic.io/start/)<br/>
-        [Widget Maker](https://norbert515.github.io/widget_maker/website/)<br/>
-        [2dimensions](https://www.2dimensions.com/)<br/>
-        [embed-new-flutter](https://dartpad.dev/experimental/embed-new-flutter.html?id=fbd01e9700bd19af3c71dafa0fbb454b&split=50)<br/>
-        <br/><br/>
+    Sites:<br/> 
+[flutterx](https://flutterx.com/) and [itsallwidgets](https://itsallwidgets.com/) by [hillel Coren](https://twitter.com/hillelcorenbr), [Scott Stoll](https://twitter.com/scottstoll2017),  [Simon Lightfoot](https://twitter.com/devangelslondon), and  [Thomas Burkhart](https://twitter.com/ThomasBurkhartB)<br/>
+[flutter-widget-livebook](https://flutter-widget-livebook.blankapp.org/basics/introduction/)<br/>
+[fidev](https://fidev.io/)<br/>
+[Coding With Flutter](https://codingwithflutter.com/)<br/>
+[Flutter Crash Course](http://fluttercrashcourse.com/)<br/>
+[Code Magic](https://codemagic.io/start/)<br/>
+[Widget Maker](https://norbert515.github.io/widget_maker/website/)<br/>
+[2dimensions](https://www.2dimensions.com/)<br/>
+[embed-new-flutter](https://dartpad.dev/experimental/embed-new-flutter.html?id=fbd01e9700bd19af3c71dafa0fbb454b&split=50)<br/>
+<br/><br/>
     ** Getting Started **:<br/>
-        [i-want-to-learn-flutter-how-to-start](https://medium.com/flutter-community/i-want-to-learn-flutter-how-to-start-ffb4145f9b26) by [Pooja Bhaumik](https://twitter.com/pblead26)<br/>
-        [FlutterBasicWidgets](https://github.com/PoojaB26/FlutterBasicWidgets) by [Pooja Bhaumik](https://twitter.com/pblead26)<br/>
-        [flutter_starter_kit](https://github.com/KingWu/flutter_starter_kit) by [King Wu](https://in-techlab.com/)<br/>
+[i-want-to-learn-flutter-how-to-start](https://medium.com/flutter-community/i-want-to-learn-flutter-how-to-start-ffb4145f9b26) by [Pooja Bhaumik](https://twitter.com/pblead26)<br/>
+[FlutterBasicWidgets](https://github.com/PoojaB26/FlutterBasicWidgets) by [Pooja Bhaumik](https://twitter.com/pblead26)<br/>
+[flutter_starter_kit](https://github.com/KingWu/flutter_starter_kit) by [King Wu](https://in-techlab.com/)<br/>
 <br/>
-    **Aggregated Resources**:
-        [my-favourite-list-of-flutter-resources](https://medium.com/coding-with-flutter/my-favourite-list-of-flutter-resources-523adc611cbe)<br/>
-        [AwesomeFlutterPlaylist](https://github.com/PoojaB26/AwesomeFlutterPlaylist) by [Pooja Bhaumik](https://twitter.com/pblead26)<br/>
-        [awesome-flutter-packages](https://github.com/leisim/awesome-flutter-packages) by [Simon Leier](https://github.com/leisim)<br/>
-        [awesome-flutter](https://github.com/Solido/awesome-flutter) by [Robert Felker](https://twitter.com/BlueAquilae)<br/>
-        [Flutter-UI-Kit](https://github.com/iampawan/Flutter-UI-Kit)<br/>
+**Aggregated Resources**:
+[my-favourite-list-of-flutter-resources](https://medium.com/coding-with-flutter/my-favourite-list-of-flutter-resources-523adc611cbe)<br/>
+[AwesomeFlutterPlaylist](https://github.com/PoojaB26/AwesomeFlutterPlaylist) by [Pooja Bhaumik](https://twitter.com/pblead26)<br/>
+[awesome-flutter-packages](https://github.com/leisim/awesome-flutter-packages) by [Simon Leier](https://github.com/leisim)<br/>
+[awesome-flutter](https://github.com/Solido/awesome-flutter) by [Robert Felker](https://twitter.com/BlueAquilae)<br/>
+[Flutter-UI-Kit](https://github.com/iampawan/Flutter-UI-Kit)<br/>
 <br/>
 **Youtube Accounts**:
 <br/>
