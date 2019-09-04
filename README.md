@@ -81,6 +81,46 @@ This Project Does Not Aim To:<br/>
 6. Build json using template below<br />
 7. update pubspec.yaml with new packages<br />
 
+
+# Overview 
+**Structure**<br />
+The generated code is in a modified Model-View-Controller(MVC) layout. <br/>
+It is split into 4 main parts:<br/>
+The resulting folder structure for apps using this tool will look like this:
+<br />
+
+main.dart<br />
+state_controller.dart<br />
+data_controller.dart<br />
+components<br />
+    your_model_tile.dart<br />
+    your_model_chart.dart(if chosen)<br />
+    your_model_form.dart(if chosen)<br />
+    your_other_model_tile.dart<br />
+    ...<br />
+
+models<br />
+    your_model.dart<br />
+    your_other_model.dart<br />
+    ...<br />
+screens<br />
+    your_model_screen.dart<br />
+    your_model_list_screen.dart<br />
+    your_other_model_screen.dart<br />
+    your_other_model_list_screen.dart<br />
+    ...<br />
+sources<br />
+    localdb(if necessary)<br />
+
+
+**Project Parts** <br/>
+
+1. **The Data Controller** - This part is in charge of connecting the source of the data(local db, cloud etc) to data models that are used by the app<br />
+2. **Data Models** - These contain all of the information about the data<br />
+3. **Views** - Everything that is observable by user is either a screen or component in this structure. All views are hierarchical in that they can consist of viewa(widgets) nested inside of them, and for this structure, the screens always and only are the root of the widget tree created by the state controller and presented by the MyHomePage widget in the main page<br />
+4. **State Controller** - The 'brain' of the app that controls what screen is shown and what data goes where.<br />
+
+
 **Json Template**
 
 Template structure below
@@ -92,8 +132,6 @@ Denotations:<br/>
     ex.[%('blue', 'red', 'pink', 'black')%] = > ['blue', 'red']<br />
 **[, ...]** - option to add more..
     ex params:{ "param1":{"type":"String"}[, ...]}<br />
-
-
 
 ```
 {
@@ -113,25 +151,27 @@ Denotations:<br/>
                 [, ...]
             },
             "components":{
-                "%("screen", "list_screen")%":{}
+                "%("tile", "form", "chart")%":{}
                 [, ...]
             }
         }
 }
 ```
 
-# Overview
-The generated code is in a modified Model-View-Controller(MVC) layout. <br/>
-It is split into 4 main parts:<br/>
+# How This Code Works
 
-1. **The Data Controller** - This part is in charge of connecting the source of the data(local db, cloud etc) to data models that are used by the app<br />
-2. **Data Models** - These contain all of the information about the data<br />
-3. **Views** - Everything that is observable by user is either a screen or component in this structure. All views are hierarchical in that they can consist of viewa(widgets) nested inside of them, and for this structure, the screens always and only are the root of the widget tree created by the state controller and presented by the MyHomePage widget in the main page<br />
-4. **State Controller** - The 'brain' of the app that controls what screen is shown and what data goes where.<br />
+
 
 
 # Current Features
     - Local Database
+    - Change Notifiers to Manage data
+    - Simple to understand project flow
+# Future Plans
+    - Firebase data
+    - pubspec updating
+    - more ui options
+    - more flexible building
 
 
 

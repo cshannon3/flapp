@@ -38,6 +38,8 @@ class ControllerTemplate extends WidgetInfo {
     else if (controllerType=="data_controller"){
       // TODO not assume localdb
       packages.add(PacMan(fileName: "localdb", dirName: "sources"));
+      packages.add(PacMan(dirName: "package:flutter/services", local: false));
+      packages.add(PacMan(dirName: "dart:convert", local: false,asIs: true));
     }
   }
   String stateControllerHeader(Map screens) =>

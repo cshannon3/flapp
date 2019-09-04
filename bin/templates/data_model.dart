@@ -1,13 +1,13 @@
 import '../libraries/model_lib.dart';
 import '../params.dart';
-import '../utils.dart';
+import '../utils.dart' as u;
 import '../widget_info.dart';
 
 class DataModelTemplate extends WidgetInfo {
   List sourceTypes = [];
 
   DataModelTemplate({String baseName, Map modelData}) {
-    className = toModel(baseName);
+    className = u.toModel(baseName);
     modelData["params"]
         .forEach((pname, pdata) => params.add(Param(pname, pdata)));
     sourceTypes = modelData["sourceTypes"] ?? ["default"];
@@ -15,10 +15,10 @@ class DataModelTemplate extends WidgetInfo {
     
     classHeader = generateHeader(baseName);
     classConstructor =
-        constructor(className: className, params: params, withKey: false, withID: true);
+        u.constructor(className: className, params: params, withKey: false, withID: true);
     classBody = body(baseName);
     footer =
-        "final List<${toModel(baseName)}> initial${capWord(baseName)}List = [];";
+        "final List<${u.toModel(baseName)}> initial${u.capWord(baseName)}List = [];";
 
 
   }
@@ -28,7 +28,7 @@ class DataModelTemplate extends WidgetInfo {
     String out = "";
     sourceTypes.forEach((sourceType) {
       if (modelHeaderLib.containsKey(sourceType))
-          out += modelHeaderLib[sourceType](capWord(baseName), params) + "\n";
+          out += modelHeaderLib[sourceType](u.capWord(baseName), params) + "\n";
     });
     out += modelHeaderLib["default"](className, params) + "\n";
     return out;

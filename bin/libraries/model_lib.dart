@@ -10,7 +10,8 @@ String generateTo({List<Param> params, bool withID = true, String i = ""}) {
 }
 
 String generateFrom({List<Param> params, bool withID = true, String i = ""}) {
-  String out = "id= map[${i}Id],\n";
+  
+  String out = (i!="")?"id= map[${i}Id],\n":"id= map['Id'],\n";
   params.forEach((p){
     if (i=="db") out+="\t\t${p.name} = map[$i${p.name}],\n";
     else out+="\t\t${p.name} = map['$i${p.name}'],\n";

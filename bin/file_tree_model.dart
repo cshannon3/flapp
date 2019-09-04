@@ -26,6 +26,7 @@ class FileTreeRoot {
   String importPath;
   Map<String, dynamic> rootFiles={};
   Map<String, FileTreeBranch> branchDirs ={};
+  List<PacMan> additionalPackages=[];
   // Library
 
   FileTreeRoot({this.dirPath, this.importPath});
@@ -109,9 +110,9 @@ class FileTreeRoot {
     String out="";
     filePackages.forEach((p){
       String s = p.dirName;
-      if (p.local){
-        s= getPackagePath(fileName:p.fileName, dirName:p.dirName);
-      }
+      if (p.local)s= getPackagePath(fileName:p.fileName, dirName:p.dirName);
+      else if(p.pubspecStr!="")additionalPackages.add(p);
+      
       if (p.asIs)out+="import '$s';\n";
       else out+="import '$s.dart';\n";
     });

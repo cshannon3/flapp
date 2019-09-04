@@ -1,7 +1,7 @@
 //import '../libraries/params_lib.dart';
-import '../libraries/widget_tree_lib.dart';
+import '../libraries/widget_tree_lib.dart' as  w;
 import '../params.dart';
-import '../utils.dart';
+import '../utils.dart' as u;
 import '../widget_info.dart';
 //import '../widget_model.dart';
 
@@ -18,37 +18,37 @@ class ComponentTemplate extends WidgetInfo {
     if(componentData==null)componentData={};
 
     this.baseName = baseName;
-    className = capWord(baseName) + capWord(componentType);
+    className = u.capWord(baseName) + u.capWord(componentType);
     packages.addAll([
       PacMan(fileName: "state_controller"),
       PacMan(dirName: "package:flutter/material", local: false)
     ]);
 
-    String libName = capWord(componentType);
+    String libName = u.capWord(componentType);
     if (modelBased) {
       libName = "model" + libName;
       packages.add(PacMan(fileName: baseName, dirName: "models"));
     }
 
     widgetTree = componentData["widgetTree"] ??
-     getWidgetTreeFromLib(key:libName, baseName:baseName, data:componentData);
+     u.getWidgetTreeFromLib(key:libName, baseName:baseName, data:componentData);
 
     componentData["params"]
         ?.forEach((pname, pdata) => params.add(Param(pname, pdata)));
-    if (params.isEmpty) params = getParamsFromLib(libName, baseName);
+    if (params.isEmpty) params = u.getParamsFromLib(libName, baseName);
 
 
-    classHeader = paramsHeader(params: params);
-    classConstructor = constructor(className: className, params: params);
-    classBody = createBuildMethod(widgetTree); //body();
+    classHeader = u.paramsHeader(params: params);
+    classConstructor = u.constructor(className: className, params: params);
+    classBody = w.createBuildMethod(widgetTree); //body();
     superClassName = "StatelessWidget";
   }
 
 // TODO PARAMS
   update(){
-    classHeader = paramsHeader(params: params);
-    classConstructor = constructor(className: className, params: params);
-    classBody = createBuildMethod(widgetTree); //body();
+    classHeader = u.paramsHeader(params: params);
+    classConstructor = u.constructor(className: className, params: params);
+    classBody = w.createBuildMethod(widgetTree); //body();
     superClassName = "StatelessWidget";
 
   }

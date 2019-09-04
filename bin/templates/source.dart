@@ -11,9 +11,9 @@ class DataSourceTemplate extends WidgetInfo {
         //addGeneralDB();
         classBody = sourceLib[sourceType](models) ?? "";
         packages.addAll([
-          PacMan(dirName: "package:path/path", local: false),
-          PacMan(dirName: "package:sqflite/sqflite", local: false),
-          PacMan(dirName: "package:path_provider/path_provider", local: false),
+          PacMan(dirName: "package:path/path", local: false, pubspecStr: "path"),
+          PacMan(dirName: "package:sqflite/sqflite", local: false, pubspecStr: "sqflite"),
+          PacMan(dirName: "package:path_provider/path_provider", local: false, pubspecStr: "path_provider"),
           PacMan(dirName: "dart:async", local: false, asIs: true),
           PacMan(dirName: "dart:io", local: false, asIs: true)
         ]);

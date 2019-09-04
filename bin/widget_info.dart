@@ -2,8 +2,8 @@
 import 'params.dart';
 
 class PacMan{
-  String fileName; String dirName;bool local;bool asIs;
-  PacMan({this.fileName, this.dirName="", this.local=true, this.asIs=false});
+  String fileName; String dirName;bool local;bool asIs;String pubspecStr;
+  PacMan({this.fileName, this.dirName="", this.local=true, this.asIs=false, this.pubspecStr=""});
 }
 
 abstract class WidgetInfo{

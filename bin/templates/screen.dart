@@ -1,6 +1,6 @@
 //import '../libraries/params_lib.dart';
 import '../params.dart';
-import '../utils.dart';
+import '../utils.dart' as u;
 import '../widget_info.dart';
 import '../libraries/widget_tree_lib.dart';
 
@@ -17,27 +17,27 @@ class ScreenTemplate extends WidgetInfo {
       bool modelBased = false}) {
     this.baseName = baseName;
     if(screenData==null)screenData={};
-    className = capWord(baseName) + capWord(screenType);
+    className = u.capWord(baseName) + u.capWord(screenType);
     enumName = className.toUpperCase().split("SCREEN")[0];
     
     updatePackages(modelBased, screenType);
 
 
-    String libName = capWord(screenType);
+    String libName = u.capWord(screenType);
 
     if (modelBased)libName = "model" + libName;
         screenData["params"]
         ?.forEach((pname, pdata) => params.add(Param(pname, pdata)));
-    if (params.isEmpty)params= getParamsFromLib(libName, baseName);
+    if (params.isEmpty)params= u.getParamsFromLib(libName, baseName);
 
       
     widgetTree =
         screenData["widgetTree"] ?? 
-        getWidgetTreeFromLib(key:libName, baseName:baseName, data:screenData);
+        u.getWidgetTreeFromLib(key:libName, baseName:baseName, data:screenData);
 
 
-    classHeader = paramsHeader(params: params);
-    classConstructor = constructor(className: className, params: params);
+    classHeader = u.paramsHeader(params: params);
+    classConstructor = u.constructor(className: className, params: params);
     classBody = createBuildMethod(widgetTree);
     superClassName = "StatelessWidget";
   }
