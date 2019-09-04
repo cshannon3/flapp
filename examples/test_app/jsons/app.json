@@ -1,0 +1,41 @@
+{
+    "AppName": "test_app",
+    "models": {
+        "book": {
+            "sourceTypes": ["jsonData"],
+            "assetName":"book",
+            "params": {
+                "isbn": {"type": "String"},
+                "title":{"type":"String"},
+                "author":{"type":"String"},
+                "year": {"type": "int"},
+                "ownershipStatus":{"type": "String"},
+                "readingStatus":{"type": "String"},
+                "imgUrl":{"type": "String"},
+                "chapters":{"type": "List<String>"},
+                "readingEvents":{"type": "List<int>"},
+                "ideaNodes":{"type": "List<int>"},
+                "recommendedBy":{"type": "String"}
+            },
+            "screens":{
+                "screen":{},
+                "list_screen": {}
+            },
+            "components":{
+                "tile":{
+                    "title":"activity",
+                    "subtitle": "duration",
+                    "color":"red"
+                },
+                "form":{}
+            
+            }
+        }
+       
+
+
+    },
+    "UI": {
+    }
+
+}
